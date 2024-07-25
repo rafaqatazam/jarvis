@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>Tobi</title>
+        <link rel="stylesheet" href="{% static 'jarvisapp/css/style.css' %}"
+    </head>
+    <body>
+        <br/><br/>
+        <h1>Ask Tobi</h1>
+        <form action="{% url 'home' %}" method="post">
+            {% csrf_token %}
+            <!-- {{form.model_type}} -->
+            <br/>
+            {{form.user_prompt}}
+            
+            <button type="submit">Submit</button>
+        </form>
+        <br/><br/>
+        {% if ai_response %}
+            <pre>
+                Prompt: {{ user_prompt }} <br/>
+                Response: {{ ai_response }}
+            </pre>
+        {% endif %}
+    </body>
+</html>

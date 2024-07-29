@@ -42,6 +42,9 @@ This Django application integrates LangChain functionalities, allowing you to in
 
     ```sh
     pip install -r requirements.txt
+
+    NOTE: If you encounter installing requirements and facing any error stating about package name 'six' like 'ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory'
+    To fix this, open the requirements.txt file and mention six==1.15.0
     ```
 
 4. **Run database migrations:**

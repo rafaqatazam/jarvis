@@ -1,3 +1,4 @@
+from typing import Type
 from langchain import hub
 from langchain.agents import create_react_agent, create_openai_functions_agent, AgentExecutor
 from .llm_factory import LLMFactory

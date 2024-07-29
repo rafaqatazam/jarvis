@@ -13,4 +13,4 @@ class LLMFactory:
         elif model_type == 'openai':
             return ChatOpenAI(openai_api_key=config('OPENAI_KEY'))
         else:
-            raise ValueError("Invalid model type specified.")
+            raise ValueError("Invalid model type specified. Please choose 'anthropic' or 'openai'.")
